@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/styleShop.css">
+  <link rel="stylesheet" href="style/globalStyle.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="shortcut icon" type="image/jpg" href="./img/icon.jpg" />
+  <title>Movie Recommender -- Shop</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <section class="main-icon">
+      <a href="./index.html">
+        <figure>
+          <img class="header-icon" src="img/icon.jpg" alt="Movie Recomender icon">
+        </figure>
+      </a>
+      <section class="header-text">
+        <h1 class="header-title">Movie Recommender</h1>
+        <p class="header-disc">Simply explore everything.</p>
+      </section>
+    </section>
+
+    <section class="navbar-menu">
+      <a class="navbar-item" href="./index.html">Home</a>
+      <a class="navbar-item" href="./shop.html">Shop</a>
+      <a class="navbar-item" href="./info.html">Info</a>
+      <a class="navbar-item" target="_blank"
+        href="https://play.google.com/store/apps/details?id=com.jesse.movieRecommender">App</a>
+    </section>
+
+    <section class="hamburger-menu">
+      <figure>
+        <img class="hamburgener-img" src="./img/hamburger.png" alt="hamburger menu" onclick="openHamburger()">
+      </figure>
+    </section>
+
+    
+    <ul class="hamb-list hidehamb" id="hamb-id">
+      <li class="list-item-hamb"><a class="hamb-item text" href="./index.html">Home</a></li>
+      <li class="list-item-hamb"><a class="hamb-item text" href="./shop.html">Shop</a></li>
+      <li class="list-item-hamb"><a class="hamb-item text" href="./info.html">Info</a></li>
+      <li class="list-item-hamb"><a class="hamb-item text" target="_blank"
+        href="https://play.google.com/store/apps/details?id=com.jesse.movieRecommender">App</a></li>
+      </ul>
+      <script src="js/header.js"></script>
+    </header>
+
+  <section class="body-main">
+    <section class="body-text-shop">
+      <section class="filter-menu">
+
+        <section class="filter-child filter-shoppingcard" onclick="shoppingCard()">
+          <label class="text ">Shopping cart</label>
+        </section>
+
+        <section class="filter-child filter-fav" onclick="onUpdateFav()">
+          <label class="text" id="favText">Favorite</label>
+        </section>
+
+        <section class="filter-child filter-slider">
+          <label for="priceRange" class="text">Price</label>
+          <input type="range" min="1" max="80" value="80" class="slider" id="priceRange" step="1"
+            onchange="onUpdateFilters()">
+          <label class="text price-text">€ <em id="priceLabel">80</em></label>
+        </section>
+
+        <section id="shoppingCardHolder" class="card-holder">
+          <ul class="card-list" id="shopCardListHolder"></ul>
+          <section class="card-buttons">
+            <p class="check-button text" onclick="goToCheckout()">Checkout</p>
+            <p class="check-button text" onclick="emptyCard()">clear cart</p>
+          </section>
+        </section>
+
+      </section>
+
+
+      <section class="shop-popup-holder">
+        <section class="shop-main-screen" id="superShop">
+          <section class="shop-top-bar">
+            <h1 class="top-bar-name text" id="shop-title">{{shop item}}</h1>
+            <section class="top-bar-close" onclick="hideShop()">
+              <h1 class="close-button text nospace">X</h1>
+            </section>
+          </section>
+
+          <section class="shop-general-info">
+
+            <section class="main-shop-image">
+              <figure>
+                <img class="main-image-img" src="./img/shop/shirt1.0.png" alt="T-shirt">
+              </figure>
+            </section>
+
+            <section class="shop-more-info">
+              <section>
+                <h1 class="shop-desc-title text">Description</h1>
+                <p class="text shop-desc-desc">
+                  A T-shirt, or tee shirt, is a style of fabric shirt named after the T shape of its body and sleeves.
+                  Traditionally, it has short sleeves and a round neckline, known as a crew neck, which lacks a collar.
+                </p>
+
+                <section class="shop-color-list" id="shop-color-list">
+                  <section class="shop-color" data-color="0" onclick="setColor(0)" style="background-color: #ffffff;">
+                  </section>
+                  <section class="shop-color" data-color="1" onclick="setColor(1)" style="background-color: #1c1c1c;">
+                  </section>
+                  <section class="shop-color" data-color="2" onclick="setColor(2)" style="background-color: #828282;">
+                  </section>
+                  <section class="shop-color" data-color="3" onclick="setColor(3)" style="background-color: #1f283a;">
+                  </section>
+                  <section class="shop-color" data-color="4" onclick="setColor(4)" style="background-color: #273576;">
+                  </section>
+                  <section class="shop-color" data-color="5" onclick="setColor(5)" style="background-color: #5083b2;">
+                  </section>
+                  <section class="shop-color" data-color="6" onclick="setColor(6)" style="background-color: #017da4;">
+                  </section>
+                  <section class="shop-color" data-color="7" onclick="setColor(7)" style="background-color: #473676;">
+                  </section>
+                  <section class="shop-color" data-color="8" onclick="setColor(8)" style="background-color: #8d0921;">
+                  </section>
+                  <section class="shop-color" data-color="9" onclick="setColor(9)" style="background-color: #6a1d2d;">
+                  </section>
+                </section>
+
+                <section class="shop-info-price">
+                  <p class="text shop-price-text">€ {{price}}</p>
+                  <p class="text nospace shop-price-small">{{price-small}}</p>
+                </section>
+              </section>
+
+              <section class="shop-buttons">
+
+                <section class="shop-buy" onclick="addToShoppingCard()">
+                  <h1 class="shop-button-text nospace text">ADD TO CART</h1>
+                </section>
+
+                <section class="shop-wishlist" onclick="addToFav()">
+                  <h1 class="shop-button-text stop-fav nospace text">ADD TO FAVOURITES</h1>
+                </section>
+
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+
+
+      <section class="gerechten">
+        <section class="main_grid_holder">
+          <article data-price="12.50" class="dynamic_card food-card card-background" data-title="Classic Poster">
+            <figure class="fav-star" onclick="addToFav(1)">
+              <img class="fav-star-img" src="img/addToWatchList.png" data-id="1" alt="star black">
+            </figure>
+            <section onclick="shopFullPage(1)">
+              <figure class="card_figure">
+                <img class="card_image" src="img/shop/shirt1.0.png" alt="t-shirt">
+              </figure>
+              <section class="card_footer">
+                <header class="card_header">
+                  <h2 class="card_title text">Classic Poster</h2>
+                  <section class="card_added_info">
+                    <p class="card_price">€12.50</p>
+                  </section>
+                </header>
+              </section>
+            </section>
+          </article>
+
+          <article data-price="50.23" class="dynamic_card food-card card-background" data-title="New Mind">
+            <figure class="fav-star" onclick="addToFav(2)">
+              <img class="fav-star-img" src="img/addToWatchList.png" data-id="2" alt="star black">
+            </figure>
+            <section onclick="shopFullPage(2)">
+              <figure class="card_figure">
+                <img class="card_image" src="img/shop/shirt2.0.png" alt="t-shirt">
+              </figure>
+              <section class="card_footer">
+                <header class="card_header">
+                  <h2 class="card_title text">New Mind</h2>
+                  <section class="card_added_info">
+                    <p class="card_price">€50.23</p>
+                  </section>
+                </header>
+              </section>
+            </section>
+          </article>
+
+          <article data-price="72.23" class="dynamic_card food-card card-background" data-title="Dynamic Poster">
+            <figure class="fav-star" onclick="addToFav(3)">
+              <img class="fav-star-img" src="img/addToWatchList.png" data-id="3" alt="star black">
+            </figure>
+            <section onclick="shopFullPage(3)">
+              <figure class="card_figure">
+                <img class="card_image" src="img/shop/shirt3.0.png" alt="t-shirt">
+              </figure>
+              <section class="card_footer">
+                <header class="card_header">
+                  <h2 class="card_title text">Dynamic Poster</h2>
+                  <section class="card_added_info">
+                    <p class="card_price">€72.23</p>
+                  </section>
+                </header>
+              </section>
+            </section>
+          </article>
+
+
+          <article data-price="25.54" class="dynamic_card food-card card-background" data-title="Deep Vision">
+            <figure class="fav-star" onclick="addToFav(4)">
+              <img class="fav-star-img" src="img/addToWatchList.png" data-id="4" alt="star black">
+            </figure>
+            <section onclick="shopFullPage(4)">
+              <figure class="card_figure">
+                <img class="card_image" src="img/shop/shirt4.0.png" alt="t-shirt">
+              </figure>
+              <section class="card_footer">
+                <header class="card_header">
+                  <h2 class="card_title text">Deep Vision</h2>
+                  <section class="card_added_info">
+                    <p class="card_price">€25.54</p>
+                  </section>
+                </header>
+              </section>
+            </section>
+          </article>
+
+
+          <article data-price="66.77" class="dynamic_card food-card card-background" data-title="Simple Truth">
+            <figure class="fav-star" onclick="addToFav(5)">
+              <img class="fav-star-img" src="img/addToWatchList.png" data-id="5" alt="star black">
+            </figure>
+            <section onclick="shopFullPage(5)">
+              <figure class="card_figure">
+                <img class="card_image" src="img/shop/shirt5.0.png" alt="t-shirt">
+              </figure>
+              <section class="card_footer">
+                <header class="card_header">
+                  <h2 class="card_title text">Simple Truth</h2>
+                  <section class="card_added_info">
+                    <p class="card_price">€66.77</p>
+                  </section>
+                </header>
+              </section>
+            </section>
+          </article>
+
+
+          <article data-price="43.21" class="dynamic_card food-card card-background" data-title="Static Vision">
+            <figure class="fav-star" onclick="addToFav(6)">
+              <img class="fav-star-img" src="img/addToWatchList.png" data-id="6" alt="star black">
+            </figure>
+            <section onclick="shopFullPage(6)">
+              <figure class="card_figure">
+                <img class="card_image" src="img/shop/shirt6.0.png" alt="t-shirt">
+              </figure>
+              <section class="card_footer">
+                <header class="card_header">
+                  <h2 class="card_title text">Static Vision</h2>
+                  <section class="card_added_info">
+                    <p class="card_price">€43.21</p>
+                  </section>
+                </header>
+              </section>
+            </section>
+          </article>
+        </section>
+      </section>
+    </section>
+  </section>
+  <script src="js/shopScript.js"></script>
+</body>
+
+</html>

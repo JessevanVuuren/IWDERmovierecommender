@@ -1,0 +1,102 @@
+.body-main-checkout {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    width: 100%;
+    height: 1100px;
+}
+
+.body-text-checkout {
+    background-color: #1C2035;
+    border-radius: 40px;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkout-card {
+    height: fit-content;
+    width: 50%;
+    border: #E85D04 1px solid;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.checkout-title {
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    padding: 20px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
+    border-bottom: #E85D04 1px solid;
+}
+.card-item {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.item-name {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.form-list {
+    margin: 20px;
+    padding: 0px;
+}
+.form-item {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none; 
+}
+.label-item {
+    margin-right: 20px;
+    padding: 10px;
+    
+    color: white;
+    font-size: 20px;
+}
+.form-input {
+    width: 80%
+}
+.select-input {
+    width: 81.5%
+}
+.form-button {
+    width: 100%;
+    height: 50px;
+    background-color: #1C2035;
+    border: #E85D04 1px solid;
+    color: white;
+    font-size: 20px;
+}
+.form-button:hover {
+    border: yellow 1px solid;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    .checkout-card {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .checkout-title {
+        font-size: 25px;
+    }
+    .item-name {
+        font-size: 20px;
+        margin: 10px;
+    }
+    .label-item {
+        margin: 0px;
+        font-size: 15px;
+    }
+    .checkout-card {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

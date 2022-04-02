@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/globalStyle.css">
+  <link rel="stylesheet" href="style/checkoutStyle.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="shortcut icon" type="image/jpg" href="./img/icon.jpg" />
+  <title>Movie Recommender -- Checkout</title>
+</head>
+
+<body>
+  <header>
+    <nav class="main-header">
+      <section class="main-icon">
+      <a href="./index.html">
+        <img class="header-icon" src="img/icon.jpg" alt="Movie Recomender icon">
+      </a>
+      <section class="header-text">
+        <h1 class="header-title">Movie Recommender</h1>
+        <p class="header-disc">Simply explore everything.</p>
+      </section>
+    </section>
+    
+    <section class="navbar-menu">
+      <a class="navbar-item" href="./index.html">Home</a>
+      <a class="navbar-item" href="./shop.html">Shop</a>
+      <a class="navbar-item" href="./info.html">Info</a>
+      <a class="navbar-item" target="_blank"
+        href="https://play.google.com/store/apps/details?id=com.jesse.movieRecommender">App</a>
+    </section>
+    
+    <section class="hamburger-menu">
+      <img class="hamburgener-img" src="./img/hamburger.png" alt="hamburger menu" onclick="openHamburger()">
+    </section>
+    
+  </nav>
+  
+  <ul class="hamb-list hidehamb" id="hamb-id">
+    <li class="list-item-hamb"><a class="hamb-item text" href="./index.html">Home</a></li>
+    <li class="list-item-hamb"><a class="hamb-item text" href="./shop.html">Shop</a></li>
+    <li class="list-item-hamb"><a class="hamb-item text" href="./info.html">Info</a></li>
+    <li class="list-item-hamb"><a class="hamb-item text" target="_blank"
+      href="https://play.google.com/store/apps/details?id=com.jesse.movieRecommender">App</a></li>
+    </ul>
+    <script src="js/header.js"></script>
+  </header>
+    
+  <main class="body-main-checkout">
+    <section class="body-text-checkout">
+
+      <section class="checkout-card">
+        <h1 class="checkout-title text">Shopping Cart</h1>
+
+        <section class="check-list">
+          <section class="item-list" id="checkoutList">
+          </section>
+        </section>
+      </section>
+
+      <section class="checkout-card">
+        <form id="checkoutForm">
+          <ul class="form-list">
+            <li class="form-item">
+              <label class="label-item" for="name1">Naam</label>
+              <input class="form-input" required id="name1" type="text">
+            </li>
+            <li class="form-item">
+              <label class="label-item" for="name2">Adres</label>
+              <input class="form-input" required id="name2" type="text">
+            </li>
+            <li class="form-item">
+              <label class="label-item" for="name3">Email</label>
+              <input class="form-input" required id="name3" type="email">
+            </li>
+            <li class="form-item">
+              <label class="label-item" for="name4">Bank</label>
+              <select id="name4" class="select-input">
+                <option>ABN-Amro Bank</option>
+                <option>ASN Bank</option>
+                <option>Bunq</option>
+                <option>DHB Bank</option>
+                <option>ING Bank</option>
+                <option>Knab</option>
+                <option>Rabobank</option>
+                <option>SNS Bank</option>
+                <option>Triodos Bank</option>
+              </select>
+            </li>
+            <li class="form-item">
+              <button type="submit" class="form-button">CHECKOUT</button>
+            </li>
+          </ul>
+
+
+        </form>
+      </section>
+
+    </section>
+  </main>
+  <script src="js/checkoutScript.js"></script>
+
+</body>
+
+</html>

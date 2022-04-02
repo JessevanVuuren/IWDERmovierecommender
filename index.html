@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/globalStyle.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+  <link rel="shortcut icon" type="image/jpg" href="./img/icon.jpg" />
+  <title>Movie Recommender -- Limitless</title>
+</head>
+
+<body>
+  <header>
+    <nav class="main-header">
+      <section class="main-icon">
+        <a href="./index.html">
+          <figure>
+            <img class="header-icon" src="img/icon.jpg" alt="Movie Recomender icon" />
+          </figure>
+        </a>
+        <section class="header-text">
+          <h1 class="header-title">Movie Recommender</h1>
+          <p class="header-disc">Simply explore everything.</p>
+        </section>
+      </section>
+
+      <section class="navbar-menu">
+        <a class="navbar-item" href="./shop.html">Shop</a>
+        <a class="navbar-item" href="./info.html">Info</a>
+        <a class="navbar-item" target="_blank"
+          href="https://play.google.com/store/apps/details?id=com.jesse.movieRecommender">App</a>
+      </section>
+
+      <section class="hamburger-menu">
+        <figure>
+          <img class="hamburgener-img" src="./img/hamburger.png" alt="hamburger menu" onclick="openHamburger()" />
+        </figure>
+      </section>
+    </nav>
+
+    <ul class="hamb-list hidehamb" id="hamb-id">
+      <li class="list-item-hamb">
+        <a class="hamb-item text" href="./shop.html">Shop</a>
+      </li>
+      <li class="list-item-hamb">
+        <a class="hamb-item text" href="./info.html">Info</a>
+      </li>
+      <li class="list-item-hamb">
+        <a class="hamb-item text" target="_blank"
+          href="https://play.google.com/store/apps/details?id=com.jesse.movieRecommender">App</a>
+      </li>
+    </ul>
+    <script src="js/header.js"></script>
+  </header>
+
+  <main>
+    <section class="banner">
+      <section class="img-container">
+        <figure>
+          <img class="banner-backdrop-img" src="./img/banner.jpg" alt="banner limitless" />
+        </figure>
+        <section class="animation-gradient"></section>
+      </section>
+      <section class="banner-gradient"></section>
+      <h1 class="banner-text">LIMITLESS</h1>
+    </section>
+
+    <section class="body-main">
+      <section class="body-text">
+        <section class="global-info">
+          <section class="top-info newblock">
+            <section class="just-for-the-flex">
+              <p class="info-infoer info-age text">16+</p>
+              <p class="info-infoer text info-date">04/28/2011 ( <abbr title="Nederlands">NL</abbr> )</p>
+              <p class="info-infoer text info-genre">
+                Science Fiction, Thriller, Mystery, Drama
+              </p>
+            </section>
+
+            <section class="just-for-the-flexx">
+              <p class="text info-infoer justsomespace"><abbr title="User Score">Score</abbr></p>
+              <p class="highlight info-infoer"><b> 74%</b></p>
+            </section>
+          </section>
+
+          <section class="info-description newblock">
+            <h2 class="highlight title-description">Description</h2>
+            <p class="text text-description">
+              A paranoia-fueled action thriller about an unsuccessful writer
+              whose life is transformed by a top-secret "smart drug" that
+              allows him to use 100% of his brain and become a perfect version
+              of himself. His enhanced abilities soon attract shadowy forces
+              that threaten his new life in this darkly comic and provocative
+              film.
+            </p>
+          </section>
+
+          <section class="people-table newblock">
+            <section>
+              <a target="_blank" href="https://www.alanglynnbooks.com/" class="highlight nospace link"><b>Alan
+                  Glynn</b></a>
+              <p class="text nospace">Author</p>
+            </section>
+
+            <section>
+              <a target="_blank" href="https://www.imdb.com/name/nm1139726/" class="highlight nospace link"><b>Neil
+                  Burger</b></a>
+              <p class="text nospace">Director</p>
+            </section>
+
+            <section>
+              <a target="_blank" href="https://www.imdb.com/name/nm0228908/" class="highlight nospace link"><b>Leslie
+                  Dixon</b></a>
+              <p class="text nospace">Screenplay</p>
+            </section>
+          </section>
+
+          <section class="newblock">
+            <h2 class="highlight title-description">Cast</h2>
+            <section class="scroll-view"></section>
+          </section>
+
+          <section class="videos-trailers newblock">
+            <h2 class="highlight">Trailer's & Video's</h2>
+
+            <section class="video-row">
+              <section>
+                <video width="560" controls class="iframe-video">
+                  <source src="./videos/video1.mp4" type="video/mp4" />
+                  Your browser does not support HTML video.
+                </video>
+                <h3 class="text smallspace">
+                  Limitless (2011) Official Trailer #1 - Bradley Cooper Movie
+                </h3>
+              </section>
+
+              <section>
+                <video width="560" controls class="iframe-video">
+                  <source src="./videos/video2.mp4" type="video/mp4" />
+                  Your browser does not support HTML video.
+                </video>
+                <h3 class="text smallspace">Limitless Pill Scene</h3>
+              </section>
+
+              <section>
+                <video width="560" controls class="iframe-video">
+                  <source src="./videos/video3.mp4" type="video/mp4" />
+                  Your browser does not support HTML video.
+                </video>
+                <h3 class="text smallspace">
+                  Limitless (2011) : Eddie becomes a stock market trader
+                </h3>
+              </section>
+            </section>
+          </section>
+
+          <section class="newblock">
+            <h2 class="highlight">Reviews</h2>
+
+            <section class="review-block">
+              <section class="comment-review">
+                <section class="img-text-comment">
+                  <figure>
+                    <img class="comment-img" src="./img/review/avatar-b03f4d5f962a3203d293ce83153d8d40.jpg"
+                      alt="Kimber Myers" />
+                  </figure>
+                  <p class="comment-text text smallspace">
+                    Paradoxically absorbing, yet cliched and empty, this
+                    power-based New York story is a bit of an entertaining
+                    thrill ride, probably far more popcorn-engrossing than it
+                    deserves to be...
+                  </p>
+                </section>
+                <section class="flex-name">
+                  <h3 class="highlight comment-name">Kimber Myers</h3>
+                </section>
+              </section>
+
+              <section class="comment-review">
+                <section class="img-text-comment">
+                  <figure>
+                    <img class="comment-img" src="./img/review/avatar-8595ebaae4079979b0053ec3eeeefdd8.jpg"
+                      alt="Robbie Collin" />
+                  </figure>
+                  <p class="comment-text text smallspace">
+                    You almost feel yourself getting smarter as you watch.
+                    Remember how you felt sitting through Transformers 2? Kind
+                    of the opposite of that.
+                  </p>
+                </section>
+                <section class="flex-name">
+                  <h3 class="highlight comment-name">Robbie Collin</h3>
+                </section>
+              </section>
+
+              <section class="comment-review">
+                <section class="img-text-comment">
+                  <figure>
+                    <img class="comment-img" src="./img/review/avatar-5a60d91107582ddaca244aaa92cb6c51.jpg"
+                      alt="Sara Michelle Fetters" />
+                  </figure>
+                  <p class="comment-text text smallspace">
+                    Better, part of me kind of thinks the film is maybe
+                    extolling the virtues of addiction, saying the pluses
+                    outweigh the minuses as long as you have enough self
+                    control to understand your limits and not overdue it.
+                  </p>
+                </section>
+                <section class="flex-name">
+                  <h3 class="highlight comment-name">
+                    Sara Michelle Fetters
+                  </h3>
+                </section>
+              </section>
+
+              <section class="comment-review">
+                <section class="img-text-comment">
+                  <figure>
+                    <img class="comment-img" src="./img/review/avatar-87c91d288db43a0b1773fcefe12a5426.jpg"
+                      alt="Kim Propes" />
+                  </figure>
+                  <p class="comment-text text smallspace">
+                    Cooper is a blast here.
+                  </p>
+                </section>
+                <section class="flex-name">
+                  <h3 class="highlight comment-name">Kim Propes</h3>
+                </section>
+              </section>
+
+              <section class="comment-review">
+                <section class="img-text-comment">
+                  <figure>
+                    <img class="comment-img" src="./img/review/avatar-5d75fd185b1f29cf559db49873446bfc.jpg"
+                      alt="Tim Robey" />
+                  </figure>
+                  <p class="comment-text text smallspace">
+                    What's fresh about this concept is how it turns perfect
+                    intelligence into a superpower and tries to imagine its
+                    real-world applications. What's less fresh is the ensuing
+                    plot...
+                  </p>
+                </section>
+                <section class="flex-name">
+                  <h3 class="highlight comment-name">Tim Robey</h3>
+                </section>
+              </section>
+
+              <section class="comment-review">
+                <section class="img-text-comment">
+                  <figure>
+                    <img class="comment-img" src="./img/review/avatar-6772c97904dc8adc98ba57bfdadb1531.jpg"
+                      alt="Sammie Croot" />
+                  </figure>
+                  <p class="comment-text text smallspace">
+                    Although somewhat limited by the story and, noticeably,
+                    the budget, the boundless enthusiasm of its star stops any
+                    dullness setting in.
+                  </p>
+                </section>
+                <section class="flex-name">
+                  <h3 class="highlight comment-name">Sammie Croot</h3>
+                </section>
+              </section>
+
+              <section class="comment-review">
+                <section class="img-text-comment">
+                  <figure>
+                    <img class="comment-img" src="./img/review/avatar-5e8e9b828c8621da3c0c8dac4003ecae.jpg"
+                      alt="Brian D. Johnson" />
+                  </figure>
+                  <p class="comment-text text smallspace">
+                    Behind the quick wit and instant gratification lies the
+                    hot pulse of a crime movie-it has the ingenuity of
+                    soft-core Tarantino...
+                  </p>
+                </section>
+                <section class="flex-name">
+                  <h3 class="highlight comment-name">Brian D. Johnson</h3>
+                </section>
+              </section>
+
+              <section class="comment-review">
+                <section class="img-text-comment">
+                  <figure>
+                    <img class="comment-img" src="./img/review/avatar-e443dabfe508819879f882e34db9a8d5.jpg"
+                      alt="Noah Berlatsky" />
+                  </figure>
+                  <p class="comment-text text smallspace">
+                    Limitless demonstrates with depressing finality that the
+                    power fantasies of adults are much more banal than the
+                    power fantasies of children.
+                  </p>
+                </section>
+                <section class="flex-name">
+                  <h3 class="highlight comment-name">Noah Berlatsky</h3>
+                </section>
+              </section>
+
+              <section class="comment-review">
+                <section class="img-text-comment">
+                  <figure>
+                    <img class="comment-img" src="./img/review/avatar-4a428b30ce90ebc070c51cb29e9667d0.jpg"
+                      alt="Samantha Bradshaw" />
+                  </figure>
+                  <p class="comment-text text smallspace">
+                    Good, if limited.
+                  </p>
+                </section>
+                <section class="flex-name">
+                  <h3 class="highlight comment-name">Samantha Bradshaw</h3>
+                </section>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
